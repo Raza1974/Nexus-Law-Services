@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Law Firm</title>
+    <style>
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: hsl(193, 68%, 68%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e59215;
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-1 {
+  background: linear-gradient(135deg, #2b6777, #c8d8e4);
+  color: white;
+  background-image: url("photos/law1.jpg");
+  background-size: center;
+  background-position: center;
+}
+
+
+.section-2 {
+    background: linear-gradient(135deg, #ffcc00, #f4f4f9);
+    color: white;
+    background-image: url("photos/law2.jpg");
+  background-size: auto;
+  background-position: center;
+
+}
+
+.section-3 {
+    background: linear-gradient(135deg, #ff9900, #ffe6b3);
+    color: white;
+    background-image: url("photos/law3.jpg");
+  background-size: auto;
+  background-position: center;
+
+}
+
+.section-4 {
+    background: linear-gradient(135deg, #008080, #cce7e8);
+    color: white;
+    background-image: url("photos/law4.jpg");
+  background-size: auto;
+  background-position: center;
+
+}
+
+/* Message Section */
+.message-section {
+    background-color: #2b6777;
+    color: rgb(33, 13, 13);
+    padding: 1px 60px;
+    border-radius: 10px;
+    text-align: center;
+    background-image: url("");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.message-section h3 {
+    margin-bottom: 20px;
+}
+
+.message-section input, .message-section textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-section button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message-section button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 24px;
+    color: #2b6777;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff9900;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 42px;
+  }
+  p {
+    font-size: 16px;
+  }.logo {
+    width: 60%; /* Adjust logo size for mobile */
+    height: auto;
+
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 38px;
+  }
+  p {
+    font-size: 15px;
+   } .logo {
+    width: 60%; /* Adjust logo size for mobile */
+    height: auto;
+
+  }
+  .nav-buttons {
+    flex-direction: column; /* Stack buttons on smaller screens */
+  }
+  .nav-buttons .btn {
+    width: 100%; /* Full width for buttons */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 34px;
+  }
+  p {
+    font-size: 14px;
+  }  .logo {
+    width: 50%; /* Adjust logo size for mobile */
+    height: auto;
+
+  }
+  section {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 40px 20px; /* Increase padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .logo {
+    width: 25%; /* Adjust logo size for mobile */
+    height: auto;
+  }
+  .btn {
+    padding: 10px 20px; /* Adjust button size */
+  }
+  .modal-content {
+    width: 95%; /* Wider modal for mobile */
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="photos/Nexus law Services logo.jpg" alt="Company Logo" class="logo" />
+      <h6> SCHEDULE YOUR APPOINMENT</h6> 
+      <div class="nav-buttons">
+        <button class="btn" onclick="scrollToSection('portfolio')">Portfolio</button>
+        <button class="btn" onclick="scrollToSection('projects')">Projects</button>
+        <button class="btn" onclick="scrollToSection('contact')">Contact</button>
+        <button class="btn" onclick="scrollToSection('services')">Services</button>
+        <button class="btn" onclick="scrollToSection('about')">About</button>
+        <button class="btn" onclick="scrollToSection('blog')">Blog</button>
+      </div>
+   
+      
+    </header>
+    
+
+    <section id="portfolio" class="section-1">
+      <div>
+        <h2>Our Expertise</h2>
+        <p>
+          We specialize in providing expert legal solutions across multiple
+          industries, tailored to meet your needs.
+         
+        </p>
+        <button class="btn">Learn More</button>
+       </div>
+       <a href="index.html">Back to Home</a>
+      </section>
+
+    <section id="projects" class="section-2">
+      <div>
+        <h2>Legal Consulting</h2>
+        <p>
+          Our team offers top-notch legal consulting services to ensure that
+          your business remains compliant and protected.
+        </p>
+        <button class="btn">Explore Our Services</button>
+      </div>
+      <a href="index.html">Back to Home</a>
+      </section>
+
+    <section id="contact" class="section-3">
+      <div>
+        <h2>Criminal Defense</h2>
+        <p>
+          Trust us to defend your rights and provide robust legal representation
+          in criminal cases.
+        </p>
+        <button class="btn">View Our Cases</button>
+      </div>
+      <a href="index.html">Back to Home</a>
+      </section>
+
+    <section id="services" class="section-4">
+      <div>
+        <h2>Corporate Law</h2>
+        <p>
+          We provide legal expertise for corporate clients, ensuring regulatory
+          compliance and safeguarding your business interests.
+        </p>
+        <button class="btn">Contact Us</button>
+      </div>
+           <a href="index.html">Back to Home</a>
+          </section>
+        
+          <Section>
+            
+              </div>
+            <div class="message-section">
+              <h3>Send Us a Message</h3>
+              <a href="https://wa.me/+92 30121147699">WhatsApp</a>
+              <a href="mailto:asimr6573@gmail.com">Email</a>
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea rows="4" placeholder="Your Message" required></textarea>
+              <button type="submit">Send</button>
+            </div>
+           </Section>
+          
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Title</h2>
+        <p id="modal-text">Some text in the Modal..</p>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalText = document.getElementById("modal-text");
+      const closeBtn = document.querySelector(".close");
+
+      document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const btnText = button.textContent;
+          switch(btnText) {
+            case 'Learn More':
+              modalTitle.textContent = "Our Expertise";
+              modalText.textContent = "Our law firm specializes in providing a range of legal services from corporate law to criminal defense, tailored to meet the needs of our clients.";
+              break;
+            case 'Explore Our Services':
+              modalTitle.textContent = "Legal Consulting";
+              modalText.textContent = "We offer personalized legal consulting services to help businesses navigate complex legal environments.";
+              break;
+            case 'View Our Cases':
+              modalTitle.textContent = "Criminal Defense";
+              modalText.textContent = "Our experienced attorneys provide skilled defense in criminal matters, ensuring your rights are protected.";
+              break;
+            case 'Contact Us':
+              modalTitle.textContent = "Corporate Law";
+              modalText.textContent = "Our corporate law services include compliance, contracts, and dispute resolution.";
+              break;
+          }
+          modal.style.display = "block"; 
+        });
+      });
+
+      closeBtn.onclick = function() {
+        modal.style.display = "none"; 
+      };
+
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none"; 
+        }
+      };
+
+      function scrollToSection(id) {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+   <Footer>
+    <div class="social-links">
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹</a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener">🔗</a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">📷</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">🐦</a>
+      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">💬</a>
+      <a href="mailto:YOUR_EMAIL@example.com">✉️</a>
+      <a href="https://messages.google.com" target="_blank" rel="noopener">📧</a>
+    </div>
+    <p>© 2024 Your Law Firm. All Rights Reserved.</p>
+
+   </Footer> 
+ 
+
+  </body>
+</html>
