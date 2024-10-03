@@ -1,285 +1,303 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
+  <head>    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Your Law Firm</title>
     <style>
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Jost", sans-serif;
-  scroll-behavior: smooth;
-}
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Jost", sans-serif;
+        scroll-behavior: smooth;
+      }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
 
-header {
-    background-color: hsl(193, 68%, 68%);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+      header {
+        background-color: hsl(193, 68%, 68%);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.logo {
-    height: 50px;
-    width: auto;
-}
+      .logo {
+        height: 50px;
+        width: auto;
+      }
 
-/* Navigation Buttons */
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-}
+      /* Navigation Buttons */
+      .nav-buttons {
+        display: flex;
+        gap: 10px;
+      }
 
-.btn {
-    background-color: #ffcc00;
-    color: #333;
-    border: none;
-    padding: 8px 40px;
-    border-radius: 35px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
+      .btn {
+        background-color: #ffcc00;
+        color: #333;
+        border: none;
+        padding: 8px 40px;
+        border-radius: 35px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
 
-.btn:hover {
-    background-color: #e59215;
-    transform: scale(1.05);
-}
+      .btn:hover {
+        background-color: #e59215;
+        transform: scale(1.05);
+      }
 
-/* Section Styles */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
+      /* Section Styles */
+      section {
+        padding: 60px 20px;
+        text-align: center;
+      }
 
-.section-1 {
-  background: linear-gradient(135deg, #2b6777, #c8d8e4);
-  color: white;
-  background-image: url("photos/law1.jpg");
-  background-size: center;
-  background-position: center;
-}
+      .section-1 {
+        background: linear-gradient(135deg, #2b6777, #c8d8e4);
+        color: white;
+        background-image: url("photos/human right.jpg");
+        background-size: center;
+        background-position: center;
+      }
 
+      .section-2 {
+        background: linear-gradient(135deg, #ffcc00, #f4f4f9);
+        color: white;
+        background-image: url("photos/law2.jpg");
+        background-size: center;
+        background-position: center;
+      }
 
-.section-2 {
-    background: linear-gradient(135deg, #ffcc00, #f4f4f9);
-    color: white;
-    background-image: url("photos/law2.jpg");
-  background-size: auto;
-  background-position: center;
+      .section-3 {
+        background: linear-gradient(135deg, #ff9900, #ffe6b3);
+        color: white;
+        background-image: url("photos/law3.jpg");
+        background-size: center;
+        background-position: center;
+      }
 
-}
+      .section-4 {
+        background: linear-gradient(135deg, #008080, #cce7e8);
+        color: white;
+        background-image: url("photos/law4.jpg");
+        background-size: auto;
+        background-position: center;
+      }
 
-.section-3 {
-    background: linear-gradient(135deg, #ff9900, #ffe6b3);
-    color: white;
-    background-image: url("photos/law3.jpg");
-  background-size: auto;
-  background-position: center;
-
-}
-
-.section-4 {
-    background: linear-gradient(135deg, #008080, #cce7e8);
-    color: white;
-    background-image: url("photos/law4.jpg");
-  background-size: auto;
-  background-position: center;
-
-}
-
-/* Message Section */
-.message-section {
-    background-color: #2b6777;
-    color: rgb(33, 13, 13);
-    padding: 1px 60px;
-    border-radius: 10px;
-    text-align: center;
-    background-image: url("");
+      /* Message Section */
+      .message-section {
+        background-color: #2b6777;
+        color: rgb(33, 13, 13);
+        padding: 40px 60px;
+        border-radius: 10px;
+        text-align: center;
+        background-image: url("");
   background-size: cover;
   background-position: center;
+      }
 
+      .message-section h3 {
+        margin-bottom: 20px;
+      }
+
+      .message-section input,
+      .message-section textarea {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .message-section button {
+        background-color: #ffcc00;
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .message-section button:hover {
+        background-color: #ff9900;
+        transform: scale(1.05);
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+        border-radius: 10px;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        cursor: pointer;
+      }
+
+   /* Social Links */
+/* Container for social icons */
+.social-icons {
+  display: flex;              /* Use flexbox to align items */
+  justify-content: center;    /* Center items horizontally */
+  padding: 10px;             /* Add padding around the container */
+  gap: 20px;                 /* Space between icons */
 }
 
-.message-section h3 {
-    margin-bottom: 20px;
+/* Style for the anchor tags */
+.social-icons a {
+  font-size: 30px;           /* Increase icon size */
+  color: rgb(235, 188, 35); /* Set the default icon color */
+  text-decoration: none;      /* Remove underline from links */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-.message-section input, .message-section textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Hover effect for the icons */
+.social-icons a:hover {
+  color: #ff9900;            /* Change color on hover */
+  transform: scale(1.2);     /* Slightly enlarge the icon */
 }
 
-.message-section button {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+/* Optional: Style for spans (if you want to keep them) */
+.social-icons span {
+  display: inline-block;      /* Keep spans inline */
 }
 
-.message-section button:hover {
-    background-color: #ff9900;
-    transform: scale(1.05);
-}
+      /* Footer */
+      footer {
+        background-color: #2b6777;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
 
-/* Modal Styles */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+      footer p {
+        margin: 0;
+        font-size: 14px;
+      }
 
-.modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%;
-    border-radius: 10px;
-}
+      /* Responsive Design */
+      @media screen and (max-width: 1200px) {
+        h2 {
+          font-size: 42px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .logo {
+          width: 60%;
+          height: auto;
+        }
+      }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+      @media screen and (max-width: 992px) {
+        h2 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 15px;
+        }
+        .logo {
+          width: 60%;
+          height: auto;
+        }
+        .nav-buttons {
+          flex-direction: column;
+        }
+        .nav-buttons .btn {
+          width: 100%;
+        }
+      }
 
-.close:hover, .close:focus {
-    color: black;
-    cursor: pointer;
-}
+      @media screen and (max-width: 768px) {
+        h2 {
+          font-size: 34px;
+        }
+        p {
+          font-size: 14px;
+        }
+        .logo {
+          width: 50%;
+          height: auto;
+        }
+        section {
+          height: auto;
+          padding: 40px 20px;
+        }
+      }
 
-/* Social Links */
-.social-links {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-}
-
-.social-links a {
-    font-size: 24px;
-    color: #2b6777;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ff9900;
-    transform: scale(1.2);
-}
-
-/* Footer */
-footer {
-    background-color: #2b6777;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-/* Responsive Design */
-@media screen and (max-width: 1200px) {
-  h2 {
-    font-size: 42px;
-  }
-  p {
-    font-size: 16px;
-  }.logo {
-    width: 60%; /* Adjust logo size for mobile */
-    height: auto;
-
-  }
-}
-
-@media screen and (max-width: 992px) {
-  h2 {
-    font-size: 38px;
-  }
-  p {
-    font-size: 15px;
-   } .logo {
-    width: 60%; /* Adjust logo size for mobile */
-    height: auto;
-
-  }
-  .nav-buttons {
-    flex-direction: column; /* Stack buttons on smaller screens */
-  }
-  .nav-buttons .btn {
-    width: 100%; /* Full width for buttons */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 34px;
-  }
-  p {
-    font-size: 14px;
-  }  .logo {
-    width: 50%; /* Adjust logo size for mobile */
-    height: auto;
-
-  }
-  section {
-    height: auto; /* Adjust height for smaller screens */
-    padding: 40px 20px; /* Increase padding */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  h2 {
-    font-size: 30px;
-  }
-  p {
-    font-size: 12px;
-  }
-  .logo {
-    width: 25%; /* Adjust logo size for mobile */
-    height: auto;
-  }
-  .btn {
-    padding: 10px 20px; /* Adjust button size */
-  }
-  .modal-content {
-    width: 95%; /* Wider modal for mobile */
-  }
-}
-
+      @media screen and (max-width: 480px) {
+        h2 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 12px;
+        }
+        .logo {
+          width: 25%;
+          height: auto;
+        }
+        .btn {
+          padding: 10px 20px;
+        }
+        .modal-content {
+          width: 95%;
+        }
+      }
     </style>
   </head>
 
   <body>
     <header>
-      <img src="photos/Nexus law Services logo.jpg" alt="Company Logo" class="logo" />
-      <h6> SCHEDULE YOUR APPOINMENT</h6> 
+      <img
+        src="photos/Nexus law Services logo.jpg"
+        alt="Company Logo"
+        class="logo"
+      />
+      <h6>SCHEDULE YOUR APPOINTMENT</h6>
       <div class="nav-buttons">
         <button class="btn" onclick="scrollToSection('portfolio')">Portfolio</button>
         <button class="btn" onclick="scrollToSection('projects')">Projects</button>
@@ -288,9 +306,8 @@ footer p {
         <button class="btn" onclick="scrollToSection('about')">About</button>
         <button class="btn" onclick="scrollToSection('blog')">Blog</button>
       </div>
-   
-      
     </header>
+
     
 
     <section id="portfolio" class="section-1">
@@ -337,7 +354,7 @@ footer p {
           We provide legal expertise for corporate clients, ensuring regulatory
           compliance and safeguarding your business interests.
         </p>
-        <button class="btn">Contact Us</button>
+        <button class="btn">Taxation</button>
       </div>
            <a href="index.html">Back to Home</a>
           </section>
@@ -417,7 +434,7 @@ footer p {
               modalTitle.textContent = "Criminal Defense";
               modalText.textContent = "Our experienced attorneys provide skilled defense in criminal matters, ensuring your rights are protected.";
               break;
-            case 'Contact Us':
+            case 'Taxation':
               modalTitle.textContent = "Corporate Law";
               modalText.textContent = "Our corporate law services include compliance, contracts, and dispute resolution.";
               break;
@@ -444,20 +461,17 @@ footer p {
       }
     </script>
    <Footer>
-    <div class="social-links">
-      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹</a>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener">📘</a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener">🔗</a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener">📷</a>
-      <a href="https://twitter.com" target="_blank" rel="noopener">🐦</a>
-      <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener">💬</a>
-      <a href="mailto:YOUR_EMAIL@example.com">✉️</a>
-      <a href="https://messages.google.com" target="_blank" rel="noopener">📧</a>
-    </div>
+   
+      
+<div class="social-icons">
+  <span><a href="https://www.linkedin.com" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
+  <span><a href="https://www.twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a></span>
+  <span><a href="https://www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a></span>
+  <span><a href="https://www.facebook.com" title="Facebook"><i class="fab fa-facebook-f"></i></a></span>
+  <span><a href="https://www.youtube.com" title="YouTube"><i class="fab fa-youtube"></i></a></span>
+ </div>
+  
     <p>© 2024 Your Law Firm. All Rights Reserved.</p>
-
    </Footer> 
- 
-
   </body>
 </html>
